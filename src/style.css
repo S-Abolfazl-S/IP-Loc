@@ -7,5 +7,211 @@
 
 body {
 	background-color: #31263e !important;
-	padding: 5px;
+	padding: 10px;
+	background-image: url("../images/background-image.png");
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center; 
 }
+
+/* ################################# start-header #################################### */
+/* ========================= start-subheader ============================= */
+header {
+	width: 100%;
+	color: white;
+	padding-top: 10px; 
+}
+
+header #header {
+	width: inherit;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-radius: 15px;
+	/*  */
+}
+
+header #header h1 {
+	font-size: 3em;
+	/* margin-left: 100px; */
+	border-radius: 15px;
+}
+
+header #header i {
+	color: greenyellow;
+	font-size: 9em;
+	opacity: 0.8;
+}
+
+header #header img {
+	width: 10%;
+	align-self: flex-end !important;
+	opacity: 0.5;
+}
+
+/* ========================= end-subheader ============================= */
+/* ========================= start nav ============================= */
+header nav {
+	width: inherit;
+	display: flex;
+}
+
+header nav ul {
+	width: 100%;
+	padding: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+header nav ul li {
+	list-style-type: none;
+	margin: 5px 10px;
+	text-transform: uppercase;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	font-weight: bold !important;
+}
+
+header nav ul li a:hover {
+	text-decoration: none;
+}
+
+/* ========================= end nav ============================= */
+/* ################################# end-header #################################### */
+/* ################################# start-content #################################### */
+.content {
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 30px 0;
+}
+
+.content form {
+	width: inherit;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.content form > * {
+	width: 50%;
+	text-align: center;
+	padding: 10px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.content form > :not(:nth-child(1)):hover {
+	box-shadow: 0 0 5px greenyellow;
+}
+.content form > :not(:nth-child(1)):focus {
+	box-shadow: 0 0 10px yellow;
+}
+
+.content form div {
+	background: transparent;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+
+.content form div input {
+	background-color: transparent;
+	width: 80%;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #fff;
+	color: yellow;
+	padding: 10px;
+	margin-right: 10px;
+	flex-grow: 1;
+	overflow: hidden;
+}
+
+input:-webkit-autofill {
+	border: 1px solid #ff0;
+	-webkit-text-fill-color: #ff0;
+	-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+.content form div button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 7px;
+	padding: 10px;
+	overflow: visible;
+	transform: scale(1.1);
+	margin-top: 10px;
+	background: #000;
+	color: #fff;
+}
+
+.content form div button:active {
+	transform: scale(1);
+}
+
+.content form div button:not(:active) {
+	background: #000;
+	color: #fff;
+}
+
+.content form > p {
+	color: yellow;
+	order: -2;
+}
+
+.content form textarea {
+	resize: none;
+	text-align: left;
+}
+
+@media (max-width: 1100px) {
+	.content form > * {
+		width: 70%;
+	}
+}
+@media (max-width: 765px) {
+	#header div {
+		display: flex;
+		justify-content: center;
+	}
+
+	header #header {
+		padding: 0 10px;
+	}
+	header #header h1 {
+		margin: 0;
+	}
+	header #header i {
+		font-size: 4em;
+	}
+
+	.content form > * {
+		width: 90%;
+	}
+	.content form div {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/* ################################# end-content #################################### */
